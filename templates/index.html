@@ -6,10 +6,11 @@
 
 {% block body %}
 
+
 <div class="content">
     <h1>Task Master</h1>
 
-    <table>
+    <table class="table is-bordered">
         <tr>
             <th>Task</th>
             <th>Added</th>
@@ -20,9 +21,9 @@
             <td>{{task.content}}</td>
             <td>{{task.date_created.date()}}</td>
             <td>
-                <a href="">Delete</a>
+                <a href="/delete/{{task.id}}">Delete</a>
                 <br>
-                <a href="">Update</a>
+                <a href="/update/{{task.id}}">Update</a>
             </td>
         </tr>
         {% endfor %}
